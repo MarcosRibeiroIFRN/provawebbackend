@@ -1,5 +1,18 @@
 Esta API permite gerenciar usuários com operações CRUD (Criar, Ler, Atualizar, Deletar) e fornece autenticação via JWT (JSON Web Token). A API está conectada a um banco de dados MySQL utilizando o Sequelize ORM.
 
+
+criar um banco no xampp de nome cadastro com o seguinte script:
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+
 Endpoints
 1. Criar Novo Usuário
 URL: /api/usuarios
